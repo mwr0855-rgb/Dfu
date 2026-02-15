@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { BarChart, ClipboardList, Clock, Briefcase, Settings, Home, Menu, X, BrainCircuit, Users, BookOpen } from 'lucide-react';
+import { BarChart, ClipboardList, Clock, Briefcase, Settings, Home, Menu, X, BrainCircuit, Users, BookOpen, GraduationCap, HardDrive } from 'lucide-react';
 
 export default function DashboardLayout({
   children,
@@ -15,14 +15,24 @@ export default function DashboardLayout({
 
   const navigation = [
     { name: 'الرئيسية', href: '/dashboard', icon: Home },
+    
+    // Trainee Zone
+    { name: 'دوراتي التعليمية', href: '/dashboard/learning', icon: GraduationCap },
+    { name: 'ملفاتي (Cloud)', href: '/dashboard/my-files', icon: HardDrive },
+
+    // Professional Tools
     { name: 'إدارة المراجعة الداخلية', href: '/dashboard/audit', icon: ClipboardList },
     { name: 'أداة تقييم الشركات', href: '/dashboard/evaluation', icon: BarChart },
     { name: 'أدوات الذكاء الاصطناعي', href: '/dashboard/ai-tools', icon: BrainCircuit },
     { name: 'بنك الأسئلة (CIA)', href: '/dashboard/question-bank', icon: BookOpen },
+    
+    // Services
     { name: 'المقابلات الوظيفية', href: '/dashboard/interviews', icon: Users },
     { name: 'تنظيم الأعمال (السكرتارية)', href: '/dashboard/business-org', icon: Briefcase },
     { name: 'الساعات المعتمدة', href: '/dashboard/credit-hours', icon: Clock },
     { name: 'الاستشارات', href: '/dashboard/consulting', icon: Briefcase },
+    
+    // Admin
     { name: 'لوحة الإدارة', href: '/dashboard/admin', icon: Settings },
   ];
 
