@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { BarChart, ClipboardList, Clock, Briefcase, Settings, Home, Menu, X } from 'lucide-react';
+import { BarChart, ClipboardList, Clock, Briefcase, Settings, Home, Menu, X, BrainCircuit, Users, BookOpen } from 'lucide-react';
 
 export default function DashboardLayout({
   children,
@@ -17,7 +17,10 @@ export default function DashboardLayout({
     { name: 'الرئيسية', href: '/dashboard', icon: Home },
     { name: 'إدارة المراجعة الداخلية', href: '/dashboard/audit', icon: ClipboardList },
     { name: 'أداة تقييم الشركات', href: '/dashboard/evaluation', icon: BarChart },
-    { name: 'المقابلات الوظيفية', href: '/dashboard/interviews', icon: Briefcase },
+    { name: 'أدوات الذكاء الاصطناعي', href: '/dashboard/ai-tools', icon: BrainCircuit },
+    { name: 'بنك الأسئلة (CIA)', href: '/dashboard/question-bank', icon: BookOpen },
+    { name: 'المقابلات الوظيفية', href: '/dashboard/interviews', icon: Users },
+    { name: 'تنظيم الأعمال (السكرتارية)', href: '/dashboard/business-org', icon: Briefcase },
     { name: 'الساعات المعتمدة', href: '/dashboard/credit-hours', icon: Clock },
     { name: 'الاستشارات', href: '/dashboard/consulting', icon: Briefcase },
     { name: 'لوحة الإدارة', href: '/dashboard/admin', icon: Settings },
