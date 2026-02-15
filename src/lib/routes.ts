@@ -55,6 +55,9 @@ export const ROUTES = {
   COMMUNITY: '/community',
   REFUND_POLICY: '/refund-policy',
   USAGE_POLICY: '/usage-policy',
+  CERTIFIED_HOURS: '/certified-hours',
+  PACKAGES: '/packages-and-consulting',
+  INTERNAL_AUDIT_SYSTEM: '/admin/internal-audit',
 } as const;
 
 export type Route = typeof ROUTES[keyof typeof ROUTES];
